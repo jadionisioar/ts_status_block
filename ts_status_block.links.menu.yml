@@ -1,0 +1,6 @@
+ts_status_block.settings:
+  title: 'Teamspeak status block'
+  parent: system.admin_config_system
+  description: 'Watch your teamspeak server status in a block.'
+  route_name: ts_status_block.settings
+  weight: -21

@@ -1,0 +1,7 @@
+eu_cookie_compliance.settings:
+  path: '/admin/config/system/ts-status-block'
+  defaults:
+    _form: '\Drupal\ts_status_block\Form\TsStatusBlockAdminForm'
+    _title: 'Teamspeak Status Block'
+  requirements:
+    _permission: 'administer Ts Status Block popup'
