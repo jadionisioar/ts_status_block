@@ -116,6 +116,87 @@ class TsStatusBlockAdminForm extends ConfigFormBase {
       '#required' => TRUE,
     );
 
+    $form['ts_status_block']['background'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Background'),
+      '#default_value' => 'transparent',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['server_info_background'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Server Info Background'),
+      '#default_value' => 'transparent',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['server_info_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Server Info text'),
+      '#default_value' => '#ffffff',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['server_name_background'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Server Name Background'),
+      '#default_value' => 'transparent',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['server_name_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Server Name Text'),
+      '#default_value' => '#ffffff',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['info_background'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Info Background'),
+      '#default_value' => 'transparent',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['channel_background'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Channel Background'),
+      '#default_value' => 'transparent',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['channel_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Channel Text'),
+      '#default_value' => '#ffffff',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['username_background'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Username Background'),
+      '#default_value' => 'transparent',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+    $form['ts_status_block']['username_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Username Text'),
+      '#default_value' => '#ffffff',
+      '#size' => 30,
+      '#required' => TRUE,
+    );
+
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -126,6 +207,17 @@ class TsStatusBlockAdminForm extends ConfigFormBase {
     $this->config('ts_status_block.settings')
       ->set('ip_message', $form_state->getValue('ip_message'))
       ->set('port_message', $form_state->getValue('port_message'))
+      ->set('background', $form_state->getValue('background'))
+      ->set('server_info_background', $form_state->getValue('server_info_background'))
+      ->set('server_info_text', $form_state->getValue('server_info_text'))
+      ->set('server_name_background', $form_state->getValue('server_name_background'))
+      ->set('server_name_text', $form_state->getValue('server_name_text'))
+      ->set('info_background', $form_state->getValue('info_background'))
+      ->set('channel_background', $form_state->getValue('channel_background'))
+      ->set('channel_text', $form_state->getValue('channel_text'))
+      ->set('username_background', $form_state->getValue('username_background'))
+      ->set('username_text', $form_state->getValue('username_text'))
+
       ->save();
 
     parent::submitForm($form, $form_state);
