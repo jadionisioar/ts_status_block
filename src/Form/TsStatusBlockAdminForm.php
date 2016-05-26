@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\ts_status_block\Form\TsStatusBlockAdminForm.
- */
-
 namespace Drupal\ts_status_block\Form;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -93,8 +88,6 @@ class TsStatusBlockAdminForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-
-    $config = $this->config('ts_status_block.settings');
 
     $form['ts_status_block'] = array(
       '#type'  => 'details',
@@ -195,8 +188,6 @@ class TsStatusBlockAdminForm extends ConfigFormBase {
       '#size' => 30,
       '#required' => TRUE,
     );
-
-
     return parent::buildForm($form, $form_state);
   }
 
