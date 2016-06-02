@@ -12,8 +12,7 @@
     'ts_status_block' =>
       array(
         'variables' => array(
-          'title' => 'Default title',
-          'description' => NULL,
+          'ts' => NULL,
         ),
         'template' => 'block--tsblock',
       ),

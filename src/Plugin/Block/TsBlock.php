@@ -36,7 +36,8 @@ class TsBlock extends BlockBase {
     return array(
       '#title' => 'Team speak server status',
       '#description' => t('Watch your teamspeak server status in a block.'),
-      '#markup' => $this->t('<span id="its318189"><a href="http://www.teamspeak3.com/">teamspeak server</a> Hosting by TeamSpeak3.com</span><script type="text/javascript" src="http://view.light-speed.com/teamspeak3.php?IP=$ip&PORT=$port&QUERY=10011&UID=318189&display=block&font=11px&background=$background&server_info_background=$server_info_background&server_info_text=$server_info_text&server_name_background=$server_name_background&server_name_text=$server_name_text&info_background=$info_background&channel_background=$channel_background&channel_text=$channel_text&username_background=$username_background&username_text=$username_text></script>',
+      '#theme' => 'ts_status_block',
+      '#ts' => $this->t('<span id="its318189"><a href="http://www.teamspeak3.com/">teamspeak server</a> Hosting by TeamSpeak3.com</span><script type="text/javascript" src="http://view.light-speed.com/teamspeak3.php?IP=$ip&PORT=$port&QUERY=10011&UID=318189&display=block&font=11px&background=$background&server_info_background=$server_info_background&server_info_text=$server_info_text&server_name_background=$server_name_background&server_name_text=$server_name_text&info_background=$info_background&channel_background=$channel_background&channel_text=$channel_text&username_background=$username_background&username_text=$username_text></script>',
         array(
           '$ip' => $ip,
           '$port' => $port,

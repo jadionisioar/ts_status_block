@@ -1,6 +1,0 @@
-name: Teamspeak server status block
-description: Block with our teamspeak server
-package: Gaming
-type: module
-version: 1.0
-core: 8.x
